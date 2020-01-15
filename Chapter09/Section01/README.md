@@ -13,4 +13,9 @@ Cannonical theories and methods of pinhole camera calibration have been deeply i
 The best way to design such a pattern is not to have it printed on a hardboard, but directly have it displayed on an extra monitor. In this way, instead of moving the calibration board around the fixed camera, we move the camera around in front of the monitor.
 
 
+**Activity09.01**
+[Activity09.01.py](../Activity09.01/Activity09.01.py) provides a code snippet for calibration using a chessboard.
 
+
+**Activity09.02**
+[Activity09.02.py](../Activity09.02/Activity09.02.py) provides a code snippet for calibration using an asymmetrical circle pattern.
