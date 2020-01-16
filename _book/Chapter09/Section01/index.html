@@ -297,7 +297,7 @@
                 <a href="../Section02/">
             
                     
-                    9.2 Fisheye Camera Calibration
+                    9.2 Camera Pose Estimation
             
                 </a>
             
@@ -310,7 +310,7 @@
                 <a href="../Section03/">
             
                     
-                    9.3 Stereo Vision Calibration
+                    9.3 Fisheye Camera Calibration
             
                 </a>
             
@@ -323,7 +323,20 @@
                 <a href="../Section04/">
             
                     
-                    9.4 Kinect Calibration
+                    9.4 Stereo Vision Calibration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13.5" data-path="../Section05/">
+            
+                <a href="../Section05/">
+            
+                    
+                    9.5 Kinect Calibration
             
                 </a>
             
@@ -548,17 +561,23 @@
 <li><p>Classical black-white chessboard
 <img src="https://docs.opencv.org/4.2.0/pattern.png" alt="Classical black-white chessboard"></p>
 </li>
-<li><p>Symmetrical circle pattern</p>
-</li>
-<li><p>Asymmetrical circle pattern
-<img src="https://docs.opencv.org/4.2.0/acircles_pattern.png" alt="Asymmetrical circle pattern"></p>
+<li><p>Symmetrical circle pattern<br>
+Clearly, since a circle itself is symmetrical, if the circle pattern is designed as symmetrical, the entire symmetrical circle pattern is symmetrical as well, which will cause the ambiguity when the calibration board is turned around 180 degree. That&apos;s possibly why a symmetrical circle pattern is NOT provided in <a href="https://opencv.org/" target="_blank">OpenCV</a>.</p>
 </li>
 </ul>
-<p>The best way to design such a pattern is not to have it printed on a hardboard, but directly have it displayed on an extra monitor. In this way, instead of moving the calibration board around the fixed camera, we move the camera around in front of the monitor.</p>
-<p><strong>Activity09.01</strong>
-<a href="../Activity09.01/Activity09.01.py">Activity09.01.py</a> provides a code snippet for calibration using a chessboard.</p>
-<p><strong>Activity09.02</strong>
-<a href="../Activity09.02/Activity09.02.py">Activity09.02.py</a> provides a code snippet for calibration using an asymmetrical circle pattern.</p>
+<ul>
+<li>Asymmetrical circle pattern
+<img src="https://docs.opencv.org/4.2.0/acircles_pattern.png" alt="Asymmetrical circle pattern"></li>
+</ul>
+<p>The best low-cost way to design such a pattern is not to have it printed on a hardboard, but directly have it displayed on an extra monitor. In such a way,</p>
+<ul>
+<li>you not only ensure the perfect flatness of the calibration board,</li>
+<li>but also move a portable camera in front of the monitor rather than hold the calibration board and move it around the fixed camera.</li>
+</ul>
+<p><a href="../Activity09.01/Activity09.01.py">Activity09.01.py</a> provides a code snippet for calibration using a chessboard.</p>
+<p><a href="../Activity09.02/Activity09.02.py">Activity09.02.py</a> provides a code snippet for calibration using an asymmetrical circle pattern.</p>
+<p><strong>Exercise09.01</strong><br>
+Generate any calibration pattern as you wish, and calibrate your camera with it. You can try out <a href="https://calib.io/pages/camera-calibration-pattern-generator" target="_blank">camera calibration pattern generator from Calib.io</a></p>
 
                                 
                                 </section>
@@ -591,7 +610,7 @@
                 </a>
                 
                 
-                <a href="../Section02/" class="navigation navigation-next " aria-label="Next page: 9.2 Fisheye Camera Calibration">
+                <a href="../Section02/" class="navigation navigation-next " aria-label="Next page: 9.2 Camera Pose Estimation">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -602,7 +621,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"9.1 Pinhole Camera Calibration","level":"2.13.1","depth":2,"next":{"title":"9.2 Fisheye Camera Calibration","level":"2.13.2","depth":2,"path":"Chapter09/Section02/README.md","ref":"Chapter09/Section02/README.md","articles":[]},"previous":{"title":"Chapter 09. Camera Calibration","level":"2.13","depth":1,"path":"Chapter09/README.md","ref":"Chapter09/README.md","articles":[{"title":"9.1 Pinhole Camera Calibration","level":"2.13.1","depth":2,"path":"Chapter09/Section01/README.md","ref":"Chapter09/Section01/README.md","articles":[]},{"title":"9.2 Fisheye Camera Calibration","level":"2.13.2","depth":2,"path":"Chapter09/Section02/README.md","ref":"Chapter09/Section02/README.md","articles":[]},{"title":"9.3 Stereo Vision Calibration","level":"2.13.3","depth":2,"path":"Chapter09/Section03/README.md","ref":"Chapter09/Section03/README.md","articles":[]},{"title":"9.4 Kinect Calibration","level":"2.13.4","depth":2,"path":"Chapter09/Section04/README.md","ref":"Chapter09/Section04/README.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter09/Section01/README.md","mtime":"2020-01-15T12:39:52.965Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-15T12:36:05.028Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"9.1 Pinhole Camera Calibration","level":"2.13.1","depth":2,"next":{"title":"9.2 Camera Pose Estimation","level":"2.13.2","depth":2,"path":"Chapter09/Section02/README.md","ref":"Chapter09/Section02/README.md","articles":[]},"previous":{"title":"Chapter 09. Camera Calibration","level":"2.13","depth":1,"path":"Chapter09/README.md","ref":"Chapter09/README.md","articles":[{"title":"9.1 Pinhole Camera Calibration","level":"2.13.1","depth":2,"path":"Chapter09/Section01/README.md","ref":"Chapter09/Section01/README.md","articles":[]},{"title":"9.2 Camera Pose Estimation","level":"2.13.2","depth":2,"path":"Chapter09/Section02/README.md","ref":"Chapter09/Section02/README.md","articles":[]},{"title":"9.3 Fisheye Camera Calibration","level":"2.13.3","depth":2,"path":"Chapter09/Section03/README.md","ref":"Chapter09/Section03/README.md","articles":[]},{"title":"9.4 Stereo Vision Calibration","level":"2.13.4","depth":2,"path":"Chapter09/Section04/README.md","ref":"Chapter09/Section04/README.md","articles":[]},{"title":"9.5 Kinect Calibration","level":"2.13.5","depth":2,"path":"Chapter09/Section05/README.md","ref":"Chapter09/Section05/README.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter09/Section01/README.md","mtime":"2020-01-16T01:00:24.071Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-16T00:15:17.157Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
