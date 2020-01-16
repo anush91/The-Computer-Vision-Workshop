@@ -1,0 +1,7 @@
+{
+    "gitbook": ">=2.0.0",
+    "plugins": ["katex"],
+    "author": "Pei Jia <jiapei@longervision.com>",
+    "description": "This book is created by gitbook",
+    "pluginsConfig": {}
+}

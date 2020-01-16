@@ -1,5 +1,5 @@
 # Section 09.2: Camera Pose Estimation
 
 
-After 
+After the intrinsic parameters have been calculated 
 
