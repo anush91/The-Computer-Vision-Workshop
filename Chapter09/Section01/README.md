@@ -37,4 +37,4 @@ The best low-cost way to design such a pattern is not to have it printed on a ha
 
 
 **Exercise 09.01**<br/>
-Generate any calibration pattern as you wish, and calibrate your camera with it. You are encouraged to try out [camera calibration pattern generator from Calib.io](https://calib.io/pages/camera-calibration-pattern-generator)
+Generate any calibration pattern as you wish, and calibrate your camera with it. You are encouraged to try out [pattern generator from Calib.io](https://calib.io/pages/camera-calibration-pattern-generator) to generate your own patterns for camera calibration.
