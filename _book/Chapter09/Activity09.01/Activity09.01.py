@@ -55,6 +55,7 @@ SOFTWARE.
 # Contact:          jiapei@longervision.com                                    #
 # URL:              http://www.longervision.cn                                 #
 # Create Date:      2017-03-19                                                 #
+# Modified Date:    2020-01-18                                                 #
 ################################################################################
 
 import numpy as np
@@ -73,7 +74,7 @@ objp[:,:2] = np.mgrid[0:7,0:6].T.reshape(-1,2)
 objpoints = [] # 3d point in real world space
 imgpoints = [] # 2d points in image plane.
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(2)
 found = 0
 while(found < 10):  # Here, 10 can be changed to whatever number you like to choose
     ret, img = cap.read() # Capture frame-by-frame
@@ -91,6 +92,11 @@ while(found < 10):  # Here, 10 can be changed to whatever number you like to cho
 
         # Draw and display the corners
         img = cv2.drawChessboardCorners(img, (7,6), corners2, ret)
+
+        # Enable the following 2 lines if you want to save the calibration images.
+        filename = str(found) +".jpg"
+        cv2.imwrite(filename, img)
+
         found += 1
 
     cv2.imshow('img', img)
@@ -104,18 +110,9 @@ cv2.destroyAllWindows()
 ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, gray.shape[::-1], None, None)
 
 
-# It's very important to transform the matrix to list.
-data = {'camera_matrix': np.asarray(mtx).tolist(), 'dist_coeff': np.asarray(dist).tolist()}
-
-with open("calibration.yaml", "w") as f:
-    yaml.dump(data, f)
-
-
-# You can use the following 4 lines of code to load the data in file "calibration.yaml"
-# with open('calibration.yaml') as f:
-#     loadeddict = yaml.load(f)
-# mtxloaded = loadeddict.get('camera_matrix')
-# distloaded = loadeddict.get('dist_coeff')
-
-
+#  Python code to write the image (OpenCV 3.2)
+fs = cv2.FileStorage('calibration.yml', cv2.FILE_STORAGE_WRITE)
+fs.write('camera_matrix', mtx)
+fs.write('dist_coeff', dist)
+fs.release()
 

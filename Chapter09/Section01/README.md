@@ -52,7 +52,7 @@ The following 10 experimental images demonstrate the chessboard corner finding p
 | ![Cornors 6](chessboard/6.jpg) | ![Cornors 7](chessboard/7.jpg) |
 | ![Cornors 8](chessboard/8.jpg) | ![Cornors 9](chessboard/9.jpg) |
 
-And the resultant calibration matrix is calculated as in this [calibration.yaml](chessboard/calibration.yml).
+And the resultant calibration matrix is calculated as in this [calibration.yml](chessboard/calibration.yml).
 
 
 [Activity09.02.py](../Activity09.02/Activity09.02.py) provides a code snippet for calibration using an asymmetrical circle pattern.
@@ -67,10 +67,10 @@ Similar to [Activity09.01.py](../Activity09.01/Activity09.01.py), calibration ca
 | ![Circles 6](circlegrid/6.jpg) | ![Circles 7](circlegrid/7.jpg) |
 | ![Circles 8](circlegrid/8.jpg) | ![Circles 9](circlegrid/9.jpg) |
 
-The resultant calibration matrix is estimated as in this [calibration.yaml](circlegrid/calibration.yml).
+The resultant calibration matrix is estimated as in this [calibration.yml](circlegrid/calibration.yml).
 
 
-Clearly, these two resultant calibration.yaml files are of little differences.
+Clearly, these two resultant calibration.yml files are of little differences.
 
 
 **Exercise 09.01**<br/>
