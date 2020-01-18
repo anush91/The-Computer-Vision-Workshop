@@ -30,10 +30,47 @@ The best low-cost way to design such a pattern is not to have it printed on a ha
 - but also move a portable camera in front of the monitor rather than hold the calibration board and move it around the fixed camera.
 
 
+In this chapter, we're using a Logitech C930e for our tests.
+
+```console
+➜  ~ lsusb
+......
+Bus 001 Device 006: ID 046d:0843 Logitech, Inc. Webcam C930e
+......
+```
+
+
 [Activity09.01.py](../Activity09.01/Activity09.01.py) provides a code snippet for calibration using a chessboard.
+
+The following 10 experimental images demonstrate the chessboard corner finding performace.
+
+|   Column 1   |      Column 2      | 
+|:----------:|:----------:|
+| ![Cornors 0](chessboard/0.jpg) | ![Cornors 1](chessboard/1.jpg) |
+| ![Cornors 2](chessboard/2.jpg) | ![Cornors 3](chessboard/3.jpg) |
+| ![Cornors 4](chessboard/4.jpg) | ![Cornors 5](chessboard/5.jpg) |
+| ![Cornors 6](chessboard/6.jpg) | ![Cornors 7](chessboard/7.jpg) |
+| ![Cornors 8](chessboard/8.jpg) | ![Cornors 9](chessboard/9.jpg) |
+
+And the resultant calibration matrix is calculated as in this [calibration.yaml](chessboard/calibration.yaml).
 
 
 [Activity09.02.py](../Activity09.02/Activity09.02.py) provides a code snippet for calibration using an asymmetrical circle pattern.
+
+Similar to [Activity09.01.py](../Activity09.01/Activity09.01.py), calibration can also be done using circle grids. 10 experimental images clearly demonstrate the performance to find the circle centers.
+
+|   Column 1   |      Column 2      | 
+|:----------:|:----------:|
+| ![Circles 0](circlegrid/0.jpg) | ![Circles 1](circlegrid/1.jpg) |
+| ![Circles 2](circlegrid/2.jpg) | ![Circles 3](circlegrid/3.jpg) |
+| ![Circles 4](circlegrid/4.jpg) | ![Circles 5](circlegrid/5.jpg) |
+| ![Circles 6](circlegrid/6.jpg) | ![Circles 7](circlegrid/7.jpg) |
+| ![Circles 8](circlegrid/8.jpg) | ![Circles 9](circlegrid/9.jpg) |
+
+The resultant calibration matrix is estimated as in this [calibration.yaml](circlegrid/calibration.yaml).
+
+
+Clearly, these two resultant calibration.yaml files are of little differences. 
 
 
 **Exercise 09.01**<br/>
