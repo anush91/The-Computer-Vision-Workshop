@@ -567,6 +567,10 @@
 Bus 001 Device 010: ID 1d6b:0102 Linux Foundation EEM Gadget
 ......
 </code></pre>
+<p>Again, our test are based on a chessboard pattern and a cirle-grid pattern, but with a fisheye camera.</p>
+<p><a href="../Activity09.03/Activity09.03.py">Activity09.03.py</a> provides a code snippet for fisheye camera calibration using a chessboard.</p>
+<p><a href="../Activity09.04/Activity09.04.py">Activity09.04.py</a> provides a code snippet for fisheye camera calibration using an asymmetrical circle pattern.</p>
+<p><strong>Exercise 09.02</strong><br></p>
 
                                 
                                 </section>
@@ -610,7 +614,7 @@ Bus 001 Device 010: ID 1d6b:0102 Linux Foundation EEM Gadget
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"9.2 Fisheye Camera Calibration","level":"2.13.2","depth":2,"next":{"title":"9.3 Camera Pose Estimation","level":"2.13.3","depth":2,"path":"Chapter09/Section03/README.md","ref":"Chapter09/Section03/README.md","articles":[]},"previous":{"title":"9.1 Pinhole Camera Calibration","level":"2.13.1","depth":2,"path":"Chapter09/Section01/README.md","ref":"Chapter09/Section01/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Pei Jia <jiapei@longervision.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":">=2.0.0","description":"This book is created by gitbook"},"file":{"path":"Chapter09/Section02/README.md","mtime":"2020-01-19T00:49:41.816Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-19T00:19:20.663Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"9.2 Fisheye Camera Calibration","level":"2.13.2","depth":2,"next":{"title":"9.3 Camera Pose Estimation","level":"2.13.3","depth":2,"path":"Chapter09/Section03/README.md","ref":"Chapter09/Section03/README.md","articles":[]},"previous":{"title":"9.1 Pinhole Camera Calibration","level":"2.13.1","depth":2,"path":"Chapter09/Section01/README.md","ref":"Chapter09/Section01/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Pei Jia <jiapei@longervision.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":">=2.0.0","description":"This book is created by gitbook"},"file":{"path":"Chapter09/Section02/README.md","mtime":"2020-01-19T03:52:20.722Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-19T03:52:50.161Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -618,10 +622,6 @@ Bus 001 Device 010: ID 1d6b:0102 Linux Foundation EEM Gadget
         
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>

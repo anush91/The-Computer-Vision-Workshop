@@ -40,7 +40,7 @@ Bus 001 Device 006: ID 046d:0843 Logitech, Inc. Webcam C930e
 ```
 
 
-[Activity09.01.py](../Activity09.01/Activity09.01.py) provides a code snippet for calibration using a chessboard.
+[Activity09.01.py](../Activity09.01/Activity09.01.py) provides a code snippet for pinhole camera calibration using a chessboard.
 
 The following 10 experimental images demonstrate the chessboard corner finding performace.
 
@@ -55,7 +55,7 @@ The following 10 experimental images demonstrate the chessboard corner finding p
 And the resultant calibration matrix is calculated as in this [calibration.yml](chessboard/calibration.yml).
 
 
-[Activity09.02.py](../Activity09.02/Activity09.02.py) provides a code snippet for calibration using an asymmetrical circle pattern.
+[Activity09.02.py](../Activity09.02/Activity09.02.py) provides a code snippet for pinhole camera calibration using an asymmetrical circle pattern.
 
 Similar to [Activity09.01.py](../Activity09.01/Activity09.01.py), calibration can also be done using circle grids. 10 experimental images clearly demonstrate the performance to find the circle centers.
 

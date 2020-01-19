@@ -12,3 +12,16 @@ Bus 001 Device 010: ID 1d6b:0102 Linux Foundation EEM Gadget
 ......
 ```
 
+Again, our test are based on a chessboard pattern and a cirle-grid pattern, but with a fisheye camera.
+
+[Activity09.03.py](../Activity09.03/Activity09.03.py) provides a code snippet for fisheye camera calibration using a chessboard.
+
+
+
+[Activity09.04.py](../Activity09.04/Activity09.04.py) provides a code snippet for fisheye camera calibration using an asymmetrical circle pattern.
+
+
+
+**Exercise 09.02**<br/>
+
+
