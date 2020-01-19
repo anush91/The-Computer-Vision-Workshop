@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>9.2 Camera Pose Estimation · GitBook</title>
+        <title>9.2 Fisheye Camera Calibration · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -301,7 +301,7 @@
                 <a href="./">
             
                     
-                    9.2 Camera Pose Estimation
+                    9.2 Fisheye Camera Calibration
             
                 </a>
             
@@ -314,7 +314,7 @@
                 <a href="../Section03/">
             
                     
-                    9.3 Fisheye Camera Calibration
+                    9.3 Camera Pose Estimation
             
                 </a>
             
@@ -544,7 +544,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >9.2 Camera Pose Estimation</a>
+        <a href="../.." >9.2 Fisheye Camera Calibration</a>
     </h1>
 </div>
 
@@ -559,12 +559,14 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="section-092-camera-pose-estimation">Section 09.2: Camera Pose Estimation</h1>
-<p>With the calibration parameters(namely, camera intrinsic parameters), by providing any type of calibration board as the reference, the camera posture relative to this calibration board can be accurately estimated.</p>
-<p><a href="../Activity09.03/Activity09.03.py">Activity09.03.py</a> provides a code snippet for pose estimation using an asymmetrical circle pattern.</p>
-<p><a href="../Activity09.04/Activity09.04.py">Activity09.04.py</a> provides a code snippet for pose estimation using a single ArUco marker.</p>
-<p><strong>Exercise 09.02</strong><br>
-Please use as many <a href="https://docs.opencv.org/master/d9/d6a/group__aruco.html" target="_blank">OpenCV ArUco markers or groups of markers</a> as possible to estimate your camera&apos;s postures. Again, you are also encouraged to try out <a href="https://calib.io/pages/camera-calibration-pattern-generator" target="_blank">pattern generator from Calib.io</a> to generate your own markers for estimating camera postures.</p>
+                                <h1 id="section-092-fisheye-camera-calibrarion">Section 09.2: Fisheye Camera Calibrarion</h1>
+<p>A fisheye camera is a pinhole camera equipped with a fisheye lens. Normally, pictures taken by a fisheye camera are extremely distorted. OpenCV documentation <a href="https://docs.opencv.org/4.2.0/db/d58/group__calib3d__fisheye.html" target="_blank">Fisheye camera model</a> provides plenty of functions to deal with <strong>Fisheye cameras</strong>. </p>
+<p>In this chapter, our experiments are tested on <a href="http://jevois.org" target="_blank">Jevois</a> with its <a href="https://www.jevoisinc.com/products/jevois-1-3mp-sensor-with-120deg-fisheye-lens" target="_blank">120-degree fisheye lens</a> for fisheye calibration.</p>
+<pre><code class="lang-console">&#x279C;  ~ lsusb
+......
+Bus 001 Device 010: ID 1d6b:0102 Linux Foundation EEM Gadget
+......
+</code></pre>
 
                                 
                                 </section>
@@ -597,7 +599,7 @@ Please use as many <a href="https://docs.opencv.org/master/d9/d6a/group__aruco.h
                 </a>
                 
                 
-                <a href="../Section03/" class="navigation navigation-next " aria-label="Next page: 9.3 Fisheye Camera Calibration">
+                <a href="../Section03/" class="navigation navigation-next " aria-label="Next page: 9.3 Camera Pose Estimation">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -608,7 +610,7 @@ Please use as many <a href="https://docs.opencv.org/master/d9/d6a/group__aruco.h
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"9.2 Camera Pose Estimation","level":"2.13.2","depth":2,"next":{"title":"9.3 Fisheye Camera Calibration","level":"2.13.3","depth":2,"path":"Chapter09/Section03/README.md","ref":"Chapter09/Section03/README.md","articles":[]},"previous":{"title":"9.1 Pinhole Camera Calibration","level":"2.13.1","depth":2,"path":"Chapter09/Section01/README.md","ref":"Chapter09/Section01/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Pei Jia <jiapei@longervision.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":">=2.0.0","description":"This book is created by gitbook"},"file":{"path":"Chapter09/Section02/README.md","mtime":"2020-01-16T08:31:23.010Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-18T11:20:37.066Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"9.2 Fisheye Camera Calibration","level":"2.13.2","depth":2,"next":{"title":"9.3 Camera Pose Estimation","level":"2.13.3","depth":2,"path":"Chapter09/Section03/README.md","ref":"Chapter09/Section03/README.md","articles":[]},"previous":{"title":"9.1 Pinhole Camera Calibration","level":"2.13.1","depth":2,"path":"Chapter09/Section01/README.md","ref":"Chapter09/Section01/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Pei Jia <jiapei@longervision.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":">=2.0.0","description":"This book is created by gitbook"},"file":{"path":"Chapter09/Section02/README.md","mtime":"2020-01-19T00:49:41.816Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-19T00:19:20.663Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -30,7 +30,7 @@ The best low-cost way to design such a pattern is not to have it printed on a ha
 - but also move a portable camera in front of the monitor rather than hold the calibration board and move it around the fixed camera.
 
 
-In this chapter, we're using a Logitech C930e for our tests.
+In this chapter, we're using a [Logitech C930e](https://www.logitech.com/en-us/product/c930e-webcam) for our tests.
 
 ```console
 ➜  ~ lsusb
