@@ -569,8 +569,77 @@ Bus 001 Device 010: ID 1d6b:0102 Linux Foundation EEM Gadget
 </code></pre>
 <p>Again, our test are based on a chessboard pattern and a cirle-grid pattern, but with a fisheye camera.</p>
 <p><a href="../Activity09.03/Activity09.03.py">Activity09.03.py</a> provides a code snippet for fisheye camera calibration using a chessboard.</p>
+<p>The following 10 experimental images demonstrate the chessboard corner finding performace.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Column 1</th>
+<th style="text-align:center">Column 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="chessboard/0.jpg" alt="Cornors 0"></td>
+<td style="text-align:center"><img src="chessboard/1.jpg" alt="Cornors 1"></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="chessboard/2.jpg" alt="Cornors 2"></td>
+<td style="text-align:center"><img src="chessboard/3.jpg" alt="Cornors 3"></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="chessboard/4.jpg" alt="Cornors 4"></td>
+<td style="text-align:center"><img src="chessboard/5.jpg" alt="Cornors 5"></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="chessboard/6.jpg" alt="Cornors 6"></td>
+<td style="text-align:center"><img src="chessboard/7.jpg" alt="Cornors 7"></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="chessboard/8.jpg" alt="Cornors 8"></td>
+<td style="text-align:center"><img src="chessboard/9.jpg" alt="Cornors 9"></td>
+</tr>
+</tbody>
+</table>
+<p>And the resultant calibration matrix is calculated as in this <a href="chessboard/calibration.yml">calibration.yml</a>.</p>
 <p><a href="../Activity09.04/Activity09.04.py">Activity09.04.py</a> provides a code snippet for fisheye camera calibration using an asymmetrical circle pattern.</p>
-<p><strong>Exercise 09.02</strong><br></p>
+<p>Similar to <a href="../Activity09.03/Activity09.03.py">Activity09.03.py</a>, calibration can also be done using circle grids. 10 experimental images clearly demonstrate the performance to find the circle centers.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Column 1</th>
+<th style="text-align:center">Column 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="circlegrid/0.jpg" alt="Circles 0"></td>
+<td style="text-align:center"><img src="circlegrid/1.jpg" alt="Circles 1"></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="circlegrid/2.jpg" alt="Circles 2"></td>
+<td style="text-align:center"><img src="circlegrid/3.jpg" alt="Circles 3"></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="circlegrid/4.jpg" alt="Circles 4"></td>
+<td style="text-align:center"><img src="circlegrid/5.jpg" alt="Circles 5"></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="circlegrid/6.jpg" alt="Circles 6"></td>
+<td style="text-align:center"><img src="circlegrid/7.jpg" alt="Circles 7"></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="circlegrid/8.jpg" alt="Circles 8"></td>
+<td style="text-align:center"><img src="circlegrid/9.jpg" alt="Circles 9"></td>
+</tr>
+</tbody>
+</table>
+<p>The resultant calibration matrix is estimated as in this <a href="circlegrid/calibration.yml">calibration.yml</a>.</p>
+<p><strong>VERY IMPORTANT</strong><br>
+Compared to the previous two implementations: <a href="../Activity09.01/Activity09.01.py">Activity09.01.py</a> and <a href="../Activity09.02/Activity09.02.py">Activity09.02.py</a>, <a href="../Activity09.03/Activity09.03.py">Activity09.03.py</a> and <a href="../Activity09.04/Activity09.04.py">Activity09.04.py</a> have only two major differences:</p>
+<ul>
+<li>cv2.calibrateCamera to cv2.fisheye.calibrate</li>
+<li>input data objpoints must be in 3 dimension.</li>
+</ul>
 
                                 
                                 </section>
@@ -614,7 +683,7 @@ Bus 001 Device 010: ID 1d6b:0102 Linux Foundation EEM Gadget
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"9.2 Fisheye Camera Calibration","level":"2.13.2","depth":2,"next":{"title":"9.3 Camera Pose Estimation","level":"2.13.3","depth":2,"path":"Chapter09/Section03/README.md","ref":"Chapter09/Section03/README.md","articles":[]},"previous":{"title":"9.1 Pinhole Camera Calibration","level":"2.13.1","depth":2,"path":"Chapter09/Section01/README.md","ref":"Chapter09/Section01/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Pei Jia <jiapei@longervision.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":">=2.0.0","description":"This book is created by gitbook"},"file":{"path":"Chapter09/Section02/README.md","mtime":"2020-01-19T03:52:20.722Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-19T03:52:50.161Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"9.2 Fisheye Camera Calibration","level":"2.13.2","depth":2,"next":{"title":"9.3 Camera Pose Estimation","level":"2.13.3","depth":2,"path":"Chapter09/Section03/README.md","ref":"Chapter09/Section03/README.md","articles":[]},"previous":{"title":"9.1 Pinhole Camera Calibration","level":"2.13.1","depth":2,"path":"Chapter09/Section01/README.md","ref":"Chapter09/Section01/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Pei Jia <jiapei@longervision.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":">=2.0.0","description":"This book is created by gitbook"},"file":{"path":"Chapter09/Section02/README.md","mtime":"2020-01-20T11:55:21.149Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-20T11:53:55.930Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -622,6 +691,10 @@ Bus 001 Device 010: ID 1d6b:0102 Linux Foundation EEM Gadget
         
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
     
         
         <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
